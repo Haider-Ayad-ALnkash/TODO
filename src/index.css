@@ -1,0 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(3, 34, 34);
+  color: #FFF;
+}
+
+input,button{
+  margin: 10px 2px;
+}
