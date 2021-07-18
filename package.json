@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Haider-Ayad-ALnkash.github.io/TODO.git/",
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +10,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
     "cookies": "^0.8.0",
+    "gh-pages": "^3.2.3",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,6 +21,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
