@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,EACE,SAAU,CACV,QAAS,CACT,qBACF,CACA,KACE,wBAAgC,CAChC,UACF,CAEA,aACE,eACF","file":"main.60b6f11c.chunk.css","sourcesContent":["*{\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\nbody {\n  background-color: rgb(3, 34, 34);\n  color: #FFF;\n}\n\ninput,button{\n  margin: 10px 2px;\n}"]}
