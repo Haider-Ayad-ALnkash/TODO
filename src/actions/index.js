@@ -1,7 +1,7 @@
 
 import { ADD_REMINDER ,CLEAR_REMINDERS,REMOVE_REMINDER} from "../components/type"
 
-export const add_Reminder=(text,date)=>{
+export const add_Reminder=(text,date,range)=>{
         const action={
             type: ADD_REMINDER,
             text,

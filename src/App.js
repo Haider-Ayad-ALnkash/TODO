@@ -1,8 +1,9 @@
 import moment from "moment";
 import { Component } from "react";
 import { connect } from "react-redux";
+import imgage from "./note.jpg";
+import { add_Reminder ,remove_Reminder,clear_allTasks} from "./actions";
 
-import { add_Reminder ,remove_Reminder,clear_allTasks} from "../actions";
 class App extends Component{
     state={
         text:'',
@@ -12,6 +13,7 @@ class App extends Component{
     render_Reminders = () =>{
         const {reminders} = this.props;
         return(
+            
                 <ul className="list-group">
                 {
                     reminders.map(reminder=>{
@@ -20,15 +22,11 @@ class App extends Component{
                             <li key={reminder.id} className='list-group-item'>
                                 <div className="list-group-item list-group-item-action">
                                     <div className="d-flex w-100 justify-content-between">
-                                    <h5 className="mb-1">{reminder.text}</h5>
+                                    <h4 className="mb-1">{reminder.text}</h4>
                                     <small className="text-muted">{ moment(new Date(reminder.date)).fromNow() }</small>
-                                    </div>
-                                    <p className="mb-1">
-                                         <label for="customRange1" className="form-label">مستوى التقدم</label>
-                                         <input type="range" className="form-range" id="customRange1" ></input>
-                                    </p>
+                                    </div> 
                                     <small className="text-muted">
-                                        <div className="remove btn btn-danger" onClick={()=>this.props.remove_Reminder(reminder.id)} >X</div>
+                                        <div className="remove btn btn-danger btn-right" onClick={()=>this.props.remove_Reminder(reminder.id)} >X</div>
                                     </small>
                                 </div>      
                               </li>
@@ -41,7 +39,7 @@ class App extends Component{
     render(){
         return(
         <div className="App container">
-            {/* <imag src="" /> */}
+                <img src={imgage} alt=""/>
             <div className="reminder-title">
                 <h2 className="text-center">What Should U Do ? </h2>
                 </div>
@@ -60,7 +58,7 @@ class App extends Component{
                 />
                 <button className="btn btn-primary btn-block" 
                         onClick={()=>
-                            {this.props.add_Reminder(this.state.text,this.state.date)
+                            {this.props.add_Reminder(this.state.text,this.state.date,this.state.range)
                                 this.setState({text:'',date:Date('y')})
                         }} 
                         >

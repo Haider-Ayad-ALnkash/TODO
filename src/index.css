@@ -11,3 +11,15 @@ body {
 input,button{
   margin: 10px 2px;
 }
+img{
+width: 80px;
+height: 80px;
+}
+.btn-right{
+  left: 0;
+  position: relative;
+}
+.mb-1{
+  line-break: anywhere;
+  width: 85%;
+}

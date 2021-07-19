@@ -5,7 +5,7 @@ import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reminder from './reducers/reduce';
-import App from './components/App';
+import App from './App';
 
 const store=createStore(reminder);
 
